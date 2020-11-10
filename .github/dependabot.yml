@@ -1,0 +1,8 @@
+# This is a CI that maintains dependencies
+version: 2
+updates:
+- package-ecosystem: cargo
+  directory: "/"
+  schedule:
+    interval: live
+  open-pull-requests-limit: 99
