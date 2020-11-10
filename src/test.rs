@@ -1,20 +1,6 @@
-extern crate test;
-
-use self::test::Bencher;
-
 use num::BigUint;
 
-use Fibonacci;
-
-#[bench]
-fn fib_u64(b: &mut Bencher) {
-  b.iter(|| Fibonacci::<u64>::default().take(92).collect::<Vec<_>>());
-}
-
-#[bench]
-fn fib_biguint(b: &mut Bencher) {
-  b.iter(|| Fibonacci::<BigUint>::default().take(92).collect::<Vec<_>>());
-}
+use crate::Fibonacci;
 
 #[test]
 fn first_ten() {
